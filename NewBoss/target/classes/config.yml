@@ -1,0 +1,15 @@
+bosses:
+  boss1:
+    name: "Zombie King"
+    health: 20.0
+    damage: 25.0
+    type: "ZOMBIE" # ประเภทบอส
+  boss2:
+    name: "Creeper Lord"
+    health: 20.0
+    damage: 20.0
+    type: "CREEPER" # ประเภทบอส
+
+allowed-worlds:
+  - world
+  - world_nether

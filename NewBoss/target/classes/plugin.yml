@@ -1,0 +1,9 @@
+name: NewBoss
+version: 1.0
+main: me.flukky.Main
+api-version: 1.21
+commands:
+  boss:
+    description: "Summon, check, or remove a boss in a specific world"
+    usage: "/<command> summon/check/remove <world>"
+    aliases: []
