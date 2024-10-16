@@ -1,4 +1,5 @@
 package me.flukky;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
@@ -20,6 +21,20 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BossListener(this), this);
 
         getCommand("boss").setExecutor(new BossCommand(this)); // ส่ง this
+
+        /*
+         * console.sendMessage(ChatColor.AQUA + "**********************************");
+         * console.sendMessage(ChatColor.AQUA + "| Boss 1.0 have been enabled! |");
+         * console.sendMessage(ChatColor.AQUA + "**********************************");
+         */
+
+        Bukkit.getLogger().info("___________.__     ____ ___ ____  __.____  __._____.___.");
+        Bukkit.getLogger().info("\\_   _____/|    |   |    |   \\    |/ _|    |/ _|\\__  |   |");
+        Bukkit.getLogger().info(" |    __)  |    |   |    |   /      < |      <   /   |   |");
+        Bukkit.getLogger().info(" |     \\   |    |___|    |  /|    |  \\|    |  \\  \\____   |");
+        Bukkit.getLogger().info(" \\___  /   |_______ \\______/ |____|__ \\____|__ \\ / ______|");
+        Bukkit.getLogger().info("     \\/            \\/                \\/       \\/ \\/        ");
+
     }
 
     @Override
@@ -32,9 +47,10 @@ public class Main extends JavaPlugin {
             }
         }
         worldBosses.clear(); // เคลียร์ HashMap
-        console.sendMessage(ChatColor.RED + "ลบบอสทั้งหมดทุก World แล้ว");
+        console.sendMessage(ChatColor.DARK_RED + "***********************************");
+        console.sendMessage(ChatColor.DARK_RED + "| Removed all bosses in every World! |");
+        console.sendMessage(ChatColor.DARK_RED + "***********************************");
     }
-
 
     public HashMap<String, LivingEntity> getWorldBosses() {
         return worldBosses;
